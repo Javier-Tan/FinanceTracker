@@ -1,0 +1,103 @@
+﻿<Window x:Class="FinanceProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinanceProject"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Overview" Height="720" Width="1280" WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#FFB9B9B9">
+        <Grid Width="205" HorizontalAlignment="Left" OpacityMask="#FF0E0E0E" Background="#FF363636">
+            <StackPanel Width="205">
+                <ListView Foreground="#FF6CFFFF" Background="Transparent" BorderBrush="Transparent">
+
+                    <ListViewItem x:Name="categoryOverview" Height="80" Width="200" Selected="selectOverview">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="ChartAreaspline" Width="40" Height="40" VerticalAlignment="Center"/>
+                            <StackPanel Orientation="Vertical" Margin="10 10">
+                                <TextBlock Text="Overview" VerticalAlignment="Top"  FontSize="20" TextWrapping="WrapWithOverflow"/>
+                                <TextBlock Text="Overview of your finances" VerticalAlignment="Bottom" FontSize="11" TextWrapping="WrapWithOverflow" Width="128"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem x:Name="categoryBudget" Height="80" Width="200" Selected="selectBudget">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Coin" Width="40" Height="40" VerticalAlignment="Center"/>
+                            <StackPanel Orientation="Vertical" Margin="10 10">
+                                <TextBlock Text="Budget" VerticalAlignment="Top"  FontSize="20" TextWrapping="WrapWithOverflow"/>
+                                <TextBlock Text="All things planned" VerticalAlignment="Bottom" FontSize="11" TextWrapping="WrapWithOverflow"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem x:Name="categoryAccounts" Height="80" Width="200" Selected="selectAccounts">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="AccountBoxMultiple" Width="40" Height="40" VerticalAlignment="Center"/>
+                            <StackPanel Orientation="Vertical" Margin="10 10">
+                                <TextBlock Text="Accounts" VerticalAlignment="Top"  FontSize="20" TextWrapping="WrapWithOverflow"/>
+                                <TextBlock Text="View and edit accounts" VerticalAlignment="Bottom" FontSize="11" TextWrapping="WrapWithOverflow"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem x:Name="categoryExpenses" Height="80" Width="200" Selected="selectExpenses">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CallMade" Width="40" Height="40" VerticalAlignment="Center"/>
+                            <StackPanel Orientation="Vertical" Margin="5 10">
+                                <TextBlock Text="Expenses" VerticalAlignment="Top"  FontSize="20" TextWrapping="WrapWithOverflow"/>
+                                <TextBlock Text="View, edit and plan expenses" VerticalAlignment="Bottom" FontSize="11" TextWrapping="WrapWithOverflow"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem x:Name="categoryIncome" Height="80" Width="200" Selected="selectIncome">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CallReceived" Width="40" Height="40" VerticalAlignment="Center"/>
+                            <StackPanel Orientation="Vertical" Margin="10 10">
+                                <TextBlock Text="Income" VerticalAlignment="Top"  FontSize="20" TextWrapping="WrapWithOverflow"/>
+                                <TextBlock Text="View, edit and plan income" VerticalAlignment="Bottom" FontSize="11" TextWrapping="WrapWithOverflow"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem x:Name="categoryRepayments" Height="80" Width="200" Selected="selectRepayments">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CallMissed" Width="40" Height="40" VerticalAlignment="Center"/>
+                            <StackPanel Orientation="Vertical" Margin="10 10">
+                                <TextBlock Text="Repayments" VerticalAlignment="Top"  FontSize="20" TextWrapping="WrapWithOverflow"/>
+                                <TextBlock Text="View and manage debts" VerticalAlignment="Bottom" FontSize="11" TextWrapping="WrapWithOverflow"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem x:Name="categoryGoals" Height="80" Width="200" Selected="selectGoals">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="DatabaseCheck" Width="40" Height="40" VerticalAlignment="Center"/>
+                            <StackPanel Orientation="Vertical" Margin="10 10">
+                                <TextBlock Text="Goals" VerticalAlignment="Top"  FontSize="20" TextWrapping="WrapWithOverflow"/>
+                                <TextBlock Text="Manage and add goals" VerticalAlignment="Bottom" FontSize="11" TextWrapping="WrapWithOverflow"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </ListViewItem>
+
+                    <ListViewItem Height="80" Width="200" VerticalAlignment="Bottom" Foreground="White" Selected="selectDev">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CodeNotEqualVariant" Width="40" Height="40" VerticalAlignment="Center"/>
+                            <TextBlock Text="Contact Dev" VerticalAlignment="Center" Margin="10,20" FontSize="20" TextWrapping="WrapWithOverflow"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                </ListView>
+
+            </StackPanel>
+
+        </Grid>
+
+        <Grid Margin="205,0,0,0">
+            <Frame x:Name="Content" NavigationUIVisibility="Hidden"></Frame>
+        </Grid>
+    </Grid>
+</Window>
